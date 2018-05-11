@@ -7,7 +7,7 @@ module.exports = {
   base: {
     useEslint: true, // 启用eslint
     eslintEmitWarning: true, // eslint校验不通过时使用warning提示，默认为error
-    useFlexible: true, // 启用flexible
+    useFlexible: false, // 启用flexible
     remUnit: 50, // 启用flexible时的根字体大小(px)
   },
   build: {

@@ -17,7 +17,8 @@
 // };
 
 const dev = {
-  baseURL: 'http://dev.example.com',
+  // baseURL: 'http://dev.example.com',
+  baseURL: 'http://crlandrentoperate.cloud-dev-saas.crland.com.cn/crlandrentoperate/',
 };
 
 const prod = {

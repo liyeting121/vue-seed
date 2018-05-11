@@ -25,6 +25,11 @@ Vue.use(Router);
 
 const Home = resolve => require(['../views/Home/home.vue'],resolve);
 const Detail = resolve => require(['../views/Home/detail.vue'],resolve);
+const Housing = resolve => require(['../views/Housing/housingList.vue'],resolve);//门店列表
+const HousingDetail = resolve => require(['../views/Housing/housingDetail.vue'],resolve);//门店详情
+const HousingType = resolve => require(['../views/Housing/housingType.vue'],resolve);//房型介绍
+const HousingView = resolve => require(['../views/Housing/housingView.vue'],resolve);//微信房屋查看列表
+const Login  = resolve => require(['../views/login.vue'],resolve);//登录列表
 const Box = resolve => require(['../views/Box/box.vue'],resolve);
 const Son = resolve => require(['../views/Box/son.vue'],resolve);
 const routes = [
@@ -57,6 +62,31 @@ const routes = [
     path: '/home/detail',
     name: 'detail',
     component: Detail,
+  },
+  {
+    path: '/home/housing',
+    name: 'housing',
+    component: Housing,
+  },
+  {
+    path: '/home/housing/housingDetail',
+    name: 'housingDetail',
+    component: HousingDetail,
+  },
+  {
+    path: '/home/housing/housingDetail/housingType',
+    name: 'housingType',
+    component: HousingType,
+  },
+  {
+    path: '/home/housingView',
+    name: 'housingView',
+    component: HousingView,
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
   },
 ];
 

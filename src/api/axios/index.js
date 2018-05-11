@@ -4,7 +4,7 @@ import { get, post } from './methods';
 
 // axios defaults configs
 axios.defaults.baseURL = $config.baseURL;
-axios.defaults.timeout = 10000;
+axios.defaults.timeout = 30000;
 
 // axios interceptors configs
 axios.interceptors.request.use(preRequest, requestError);

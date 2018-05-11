@@ -3,7 +3,7 @@
   <view-box ref="viewBox" body-padding-bottom="53px">
    <div class="title">Home Page</div>
    <div class="shelter">
-     <div class="shelter-item" v-for="item in listData" @click="checkDetail(item)">
+     <div class="shelter-item" v-for="(item,index) in listData" @click="checkDetail(item,index)">
        <img class="portrait left-image" :src="item.image"/>
        <div class="description">{{item.msg}}</div>
      </div>
@@ -21,8 +21,9 @@
      return{
       listData:[
         {
-         msg:'Welcome to vue seed project',
-         image:portraitA
+         msg:'门店搜索列表',
+         image:portraitA,
+         routerName:"housingView"
         },
         {
          msg:'This project is the combination of vue and vux',
@@ -48,9 +49,9 @@
      }
    },
    methods:{
-    checkDetail(item){
+    checkDetail(item,index){
       var vm = this;
-      vm.$router.pushPage({name:'detail',
+      vm.$router.pushPage({name:vm.listData[index].routerName,
         params:{
           data:item
         }
