@@ -6,27 +6,17 @@
 // 如果有其他环境配置，如uat、sit，备份注释dev或prod，
 // 然后将uat、sit的配置覆盖dev或prod，如下：
 
-// dev环境配置，备份注释
-// const dev = {
-//   baseURL: 'http://dev.example.com',
-// };
+const dev = {//dev开发
+   // baseURL: 'http://10.160.151.160/hmap/r/api?organizationId=45c7fd91-f08b-4989-88d9-cc8831ae908c&',//dev
 
-// uat环境配置，注意命名还是dev或prod
-// const dev = {
-//   baseURL: 'http://uat.example.com',
-// };
-
-const dev = {
-  // baseURL: 'http://dev.example.com',
-  baseURL: 'http://crlandrentoperate.cloud-dev-saas.crland.com.cn/crlandrentoperate/',
 };
 
-const prod = {
-  baseURL: 'http://prod.example.com',
+const prod = {//生产打包
+
 };
 
-const test = {
-  baseURL: 'http://test.example.com',
+const test = {//uat测试
+  baseURL: 'http://10.160.151.160/hmap/r/api?organizationId=45c7fd91-f08b-4989-88d9-cc8831ae908c&',//dev
 };
 
 export { dev, prod, test };

@@ -1,12 +1,14 @@
-# vue-seed
+# vue-zzmetro-App
 
-> LeonChan seed
+>  liyeting
 
 ## 特别说明
-本项目基于vue脚手架工程进行修改，基于Vue2.0和Vux
-主要为了H5移动端项目能够快速开发使用，自带有Tabbar和XHeader，且加入了页面跳转的过渡动画
+本项目基于vue脚手架工程，基于Vue2.0和Vux
+本项目为海马汇子应用形式，通过登录改造，运用海马汇桥接获取用户信息和token,子应用无需登录
 基于vue-router，二次封装了界面跳转时的方法（详情请看router.js）
-所有页面目前全是keepAlive的，如果要用于基于平台的WebApp开发，那么请手动加入每个界面mounted部分的代码（在子页面使用浏览器的刷新功能时页面会重新执行mounted）
+本项目组件引入了vux和elementUIm,可以直接在页面按需使用
+所有页面目前全是keepAlive的
+本项目为在线和离线应用结合的方式开发
 
 ##基于npm安装
 
@@ -18,7 +20,7 @@
 6. npm install vue-style-loader
 7. npm install css-loader
 
-安装完以上运行 npm run dev 在浏览器上看效果，开始开发
+安装完以上运行 npm run dev 在浏览器上看效果
 
 ## src 目录下各个目录及文件简介
 
@@ -28,6 +30,7 @@
 * assets 目录 (存放项目需要引用的资源)
   * fonts 目录 (字体资源)
   * images 目录 (图片资源)
+  * less 目录（全局通用的less样式类集合，基本上所有的页面的公共样式都写在此文件中）
   * scss 目录 (全局通用的 scss 样式资源)
 * components 目录 (存放项目中的 vue 组件)
   * commons 目录 (项目通用组件，肯定是和业务逻辑无关的组件)
@@ -80,10 +83,13 @@ yarn
 # yarn config set chromedriver_cdnurl https://npm.taobao.org/mirrors/chromedriver
 
 # serve with hot reload at localhost:8080
-yarn run dev
+yarn run dev 或 npm run dev
 
 # build for production with minification
-yarn run build
+yarn run build 或 npm run build 为生产打包 
+npm run build-dev 为dev打包
+npm run build-uat 为uat打包
+
 
 # build for production and view the bundle analyzer report
 yarn run build --report
@@ -97,5 +103,3 @@ yarn run e2e
 # run all tests
 yarn test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

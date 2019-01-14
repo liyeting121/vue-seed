@@ -5,16 +5,19 @@ const path = require('path');
 
 module.exports = {
   base: {
-    useEslint: true, // 启用eslint
+    useEslint: false, // 启用eslint
     eslintEmitWarning: true, // eslint校验不通过时使用warning提示，默认为error
     useFlexible: false, // 启用flexible
     remUnit: 50, // 启用flexible时的根字体大小(px)
   },
   build: {
-    env: require('./prod.env'),
+    env: require('./prod.env'),//生产
+    testEnv:require('./test.env'),//uat
+    devEnv:require('./dev.env'),//dev
     // https://doc.webpack-china.org/configuration/devtool
     devtool: '#source-map',
     index: path.resolve(__dirname, '../dist/index.html'),
+    // billManage: path.resolve(__dirname, '../dist/billManage.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: './',

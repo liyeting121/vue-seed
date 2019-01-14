@@ -14,6 +14,7 @@ function envAbbr(env) {
 const webpackConfig = {
   entry: {
     app: config.base.useFlexible ? ['@/libs/ydui.flexible.js', '@/main.js'] : '@/main.js',
+    // billManage: config.base.useFlexible ? ['@/libs/ydui.flexible.js', '@/views/billManage/billManage.js'] : '@/views/billManage/billManage.js',
   },
   output: {
     path: config.build.assetsRoot,

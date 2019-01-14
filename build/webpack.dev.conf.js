@@ -29,6 +29,11 @@ module.exports = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true,
     }),
+   /* new HtmlWebpackPlugin({
+      filename: 'billManage.html',
+      template: 'src/views/billManage/billManage.html',
+      inject: true,
+    }),*/
     new FriendlyErrorsPlugin(),
   ],
 });
